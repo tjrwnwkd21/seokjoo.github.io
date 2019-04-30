@@ -16,7 +16,7 @@ var _promise = function (param) {
 			else {
 
 				// 실패 
-				reject(Error("실패!!"));
+				reject(Error("실패!"));
 			}
 		}, 3000);
 	});
