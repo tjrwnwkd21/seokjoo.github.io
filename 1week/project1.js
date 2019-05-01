@@ -23,11 +23,49 @@ var _promise = function (param) {
 };
 
 //Promise 실행
-_promise(true)
-.then(function (text) {
-	// 성공시
-	console.log(text);
-}, function (error) {
-	// 실패시 
-	console.error(error);
-});
+
+
+
+
+
+function fnc(work){
+	switch(work){
+		case 'callback' :
+			_promise(true)
+			.then(function (text) {
+				// 성공시
+				console.log(text);
+			}, function (error) {
+				// 실패시 
+				console.error(error);
+			});
+			break;
+		
+
+			
+		case 'promise' :
+			_promise(true)
+			.then(function (text) {
+				// 성공시
+				console.log(text);
+			}, function (error) {
+				// 실패시 
+				console.error(error);
+			});
+			break;
+		
+		
+	
+		case 'async' :
+			_promise(true)
+			.then(function (text) {
+				// 성공시
+				console.log(text);
+			}, function (error) {
+				// 실패시 
+				console.error(error);
+			});
+			break;
+	}
+
+}
