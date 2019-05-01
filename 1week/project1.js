@@ -47,11 +47,10 @@ function fnc(work){
 			_promise(true)
 			.then(function (text) {
 				// 성공시
-				console.error(error);
-				
+				console.log(text);
 			}, function (error) {
 				// 실패시 
-				console.log(text);
+				console.error(error);
 			});
 			break;
 		
