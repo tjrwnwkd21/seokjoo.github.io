@@ -29,7 +29,7 @@ function readTextFile(file) {
 function fnc(work){
 	switch(work){
 
-		case 'callback' :
+		case callback :
 			readTextFile("./txt_hello.txt");
 			fnc('callback2');	
 			break;
