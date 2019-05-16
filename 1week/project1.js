@@ -1,14 +1,12 @@
-var promise = function (text) {
-		// 비동기를 표현하기 위해 setTimeout 함수를 사용 
-	window.setTimeout(function () {
-		if (text == 'hello'){
-			readTextFile("./txt_hello.txt");
-		}
-		else if (text == 'name'){
-			readTextFile("./txt_name.txt");
-		}
-		else readTextFile("./txt_bye.txt");
-	}, 3000);
+
+var promise = function (param) {
+    return new Promise(function (resolve, reject) {
+        if (param) {
+            resolve("finish!");
+        } else {
+            reject(Error("error called"));
+        }
+    });
 };
 
 function readTextFile(file) {
@@ -23,6 +21,16 @@ function readTextFile(file) {
         }
     };
     rawFile.send(null);
+}
+
+function call_promise(text){
+	if (text == 'hello'){
+		readTextFile("./txt_hello.txt");
+	}
+	else if (text == 'name'){
+		readTextFile("./txt_name.txt");
+	}
+	else readTextFile("./txt_bye.txt");
 }
 
 
@@ -45,9 +53,10 @@ function fnc(work){
 
 
 		case 'promise' :
-			promise('hello')
-			.then(promise('name'))
-			.then(promise('bye'));
+			promise(true)
+				.then(call_promise('hello')
+				.then(call_promise('name'))
+				.then(call_promise('bye'));
 			break;
 		
 		
