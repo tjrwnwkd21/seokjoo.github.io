@@ -62,9 +62,9 @@ function fnc(work){
 		
 	
 		case 'async' :
-			await readTextFile('first.txt');
- 		  	await readTextFile('second.txt');
-		    await readTextFile('third.txt');
+			await readTextFile("./txt_hello.txt");
+ 		  	await readTextFile("./txt_name.txt");
+		    await readTextFile("./txt_bye.txt");
 			break;
 	}
 
