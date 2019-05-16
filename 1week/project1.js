@@ -1,10 +1,10 @@
 var promise = function (text) {
 		// 비동기를 표현하기 위해 setTimeout 함수를 사용 
 	window.setTimeout(function () {
-		if (text == 'hello'){
+		if (text == hello){
 			readTextFile("./txt_hello.txt");
 		}
-		else if (text == 'name'){
+		else if (text == name){
 			readTextFile("./txt_name.txt");
 		}
 		else readTextFile("./txt_bye.txt");
