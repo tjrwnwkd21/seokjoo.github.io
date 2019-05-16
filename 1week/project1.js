@@ -44,12 +44,12 @@ function fnc(work){
 			break;
 
 
-		// case 'promise' :
-		// 	promise()
-		// 		.then({function(hello)})
-		// 		.then({function(name)})
-		// 		.then({function(bye)});
-		// 	break;
+		case 'promise' :
+			promise()
+				.then({function(hello)})
+				.then({function(name)})
+				.then({function(bye)});
+			break;
 		
 		
 	
