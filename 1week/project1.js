@@ -46,9 +46,9 @@ function fnc(work){
 
 		case 'promise' :
 			promise()
-				.then(function(hello))
-				.then(function(name))
-				.then(function(bye));
+				.then({function(hello)})
+				.then({function(name)})
+				.then({function(bye)});
 			break;
 		
 		
