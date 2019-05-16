@@ -62,14 +62,9 @@ function fnc(work){
 		
 	
 		case 'async' :
-			_promise(true)
-			.then(function (text) {
-				// 성공시
-				console.log(text);
-			}, function (error) {
-				// 실패시 
-				console.error(error);
-			});
+			await readTextFile('first.txt');
+ 		  	await readTextFile('second.txt');
+		    await readTextFile('third.txt');
 			break;
 	}
 
