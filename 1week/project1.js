@@ -64,7 +64,6 @@ function fnc(work){
 				.then(call_promise('bye'));
 			break;
 		
-		
 	
 		case 'async' :
 			fnc_async();
