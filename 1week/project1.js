@@ -33,6 +33,11 @@ function call_promise(text){
 	else readTextFile("./txt_bye.txt");
 }
 
+async function fnc_async(){
+	await readTextFile("./txt_hello.txt");
+	await readTextFile("./txt_name.txt");
+	await readTextFile("./txt_bye.txt");
+}
 
 function fnc(work){
 	switch(work){
@@ -62,11 +67,7 @@ function fnc(work){
 		
 	
 		case 'async' :
-			async function fnc_async(){
-				await readTextFile("./txt_hello.txt");
-				await readTextFile("./txt_name.txt");
-				await readTextFile("./txt_bye.txt");
-			}
+			fnc_async();
 			break;
 	}
 
